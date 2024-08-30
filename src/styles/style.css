@@ -1,0 +1,159 @@
+/* Root Variables */
+:root {
+    --background: hsl(210, 100%, 6%);
+    --foreground: hsl(180, 100%, 90%);
+    --primary: hsl(200, 100%, 28%);
+    --primary-foreground: hsl(180, 100%, 90%);
+    --secondary: hsl(203, 23%, 30%);
+    --secondary-foreground: hsl(180, 100%, 90%);
+    --accent: hsl(198, 70%, 50%);
+    --accent-foreground: hsl(185, 10%, 13%);
+    --destructive: hsl(0, 98%, 44%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+    --muted: hsl(200, 50%, 30%);
+    --muted-foreground: hsl(180, 100%, 90%);
+    --card: hsl(210, 100%, 12%);
+    --card-foreground: hsl(180, 100%, 90%);
+    --popover: hsl(210, 100%, 15%);
+    --popover-foreground: hsl(180, 100%, 90%);
+    --border: hsl(210, 50%, 40%);
+    --input: hsl(210, 50%, 40%);
+    --ring: hsl(180, 100%, 90%);
+    --radius: 0rem;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--background);
+    color: var(--foreground);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--foreground);
+    text-decoration: none;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.icon {
+    fill: none;
+    stroke: var(--foreground);
+}
+
+.profile {
+    margin-left: auto;
+}
+
+.profile-button {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.section {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--card);
+    color: var(--card-foreground);
+}
+
+.section-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.monitoring-img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: var(--radius);
+}
+
+/* Output Division */
+.output-division {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.output-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.output-card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--popover);
+    color: var(--popover-foreground);
+}
+
+.output-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.output-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
